@@ -1,0 +1,82 @@
+p{
+    color: green;
+
+}
+p{
+    color: red;
+    
+}
+p.intro{
+    color: orange;
+}
+
+/* #welcome{
+    border: 3px solid red;
+} */
+h2~p{
+    font-size: 30px;
+}
+
+body{
+    --culoare-fundal:rgb(255,219,235);
+    --culoare-text:black;
+}
+
+body.dark{
+    --culoare-fundal:black;
+    --culoare-text:white;
+}
+
+
+body{
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+}
+
+#grid-pagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"z-welcome z-welcome z-welcome"
+                        "z-produse z-produse z-promotii"
+                        "z-fig1 z-orar z-orar"
+                        "z-fig2 z-orar z-orar"
+                        "z-fig3 z-orar z-orar"
+                        "z-anunturi z-anunturi z-anunturi"
+                        "z-index-intrebari z-index-intrebari z-index-intrebari";
+}
+
+#grid-pagina > *{
+    border: 3px solid blue;
+}
+
+#welcome{
+    grid-area: z-welcome;
+}
+#promotii{
+    grid-area: z-promotii;
+}
+#produse{
+    grid-area: z-produse;
+}
+ 
+#orar{
+    grid-area: z-orar;
+}
+ 
+#fig1{
+    grid-area: z-fig1;
+}
+#fig2{
+    grid-area: z-fig2;
+}
+#fig3{
+    grid-area: z-fig3;
+}
+ 
+#anunturi{
+    grid-area: z-anunturi;
+}
+ 
+#index-intrebari{
+    grid-area: z-index-intrebari;
+}
