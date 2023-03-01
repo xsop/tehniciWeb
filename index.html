@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- 1 -->
 <html lang="ro">
 
-<head>
-    <title>Component Connection - Magazin componente PC</title>
+<head> 
+    <title>Component Connection - Magazin componente PC</title> <!-- 2 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
@@ -26,45 +26,45 @@
 </head>
 
 <body>
-    <header>
+    <header> <!-- 5 -->
         <h1>Component Connection</h1>
         <nav>
             <ul>
-                <li>
-                    <a href="#regulament">Regulament</a>
+                <li><a href="index.html">Acasă</a>
                     <ul>
-                        <li><a href="#bonusuri">Bonusuri</a></li>
-                        <li><a href="#precizari">Precizări</a></li>
+                        <li><a href="index.html#welcome">Bine ati venit!</a></li>
+                        <li><a href="index.html#componente">Componente</a></li>
+                        <li><a href="index.html#faq">Întrebări frecvente</a></li>
                     </ul>
                 </li>
-                <li><a href="#etape">Etapele proiectului</a></li>
+                <li><a href="produse.html">Produse</a></li>
+                <li><a href="cos.html">Cos</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2 id="regulament">Bine ati venit!</h2>
-            <p>Bine ați venit la Component Connection, destinația finală pentru toate nevoile dumneavoastră în materie de componente PC. Suntem o echipă de entuziaști dedicați PC-ului care înțeleg importanța de a avea componentele potrivite pentru a vă construi calculatorul de vis. Fie că sunteți un jucător experimentat, un creator de conținut sau un profesionist în afaceri, noi vă acoperim.</p>
-            <figure>
+        <section> <!-- 6 -->
+            <h2 id="welcome">Bine ați venit!</h2>
+            <p>Bine ați venit la Component Connection, destinația finală pentru toate nevoile dumneavoastră în materie
+                de componente PC. Suntem o echipă de entuziaști dedicați PC-ului care înțeleg importanța de a avea
+                componentele potrivite pentru a vă construi calculatorul de vis. Fie că sunteți un jucător experimentat,
+                un creator de conținut sau un profesionist în afaceri, noi vă acoperim.</p> <!-- 9 -->
+            <figure> <!-- 8 -->
                 <picture>
-                    <source media="(max-width: 600px)" srcset="./resurse/imagini/regnum-rg6v-exp-400x226.png">
-                    <source media="(max-width: 1000px)" srcset="./resurse/imagini/regnum-rg6v-exp-800x451.png">
-                    <img src="./resurse/imagini/regnum-rg6v-exp-1600x901.png" alt="imagine-sigla" title="descriere la hover">
+                    <source media="(max-width: 800px)" srcset="./resurse/imagini/regnum-rg6v-exp-400x226.png">
+                    <source media="(max-width: 1600px)" srcset="./resurse/imagini/regnum-rg6v-exp-800x451.png">
+                    <img src="./resurse/imagini/regnum-rg6v-exp-1600x901.png" alt="imagine-sigla"
+                        title="descriere la hover">
                 </picture>
                 <figcaption>Desfasurare Carcasa</figcaption>
             </figure>
 
             <section>
-
-                <h3 id="bonusuri">Componente</h3>
-
-                <!-- <b>abcd</b><br/> cuvinte cheie
-                    <strong>abcd</strong> atentionare
-                    <p style="font-weight: bold;">abcd</p> stilizare simpla
-                    <h4>abcd</h4> sub sub capitol -->
-
-                <p style="font-weight: bold;">Site-ul nostru oferă o selecție vastă de componente PC de înaltă calitate, incluzând:</p>
-                <ol>
+                <h3 id="componente">Componente</h3>
+                <p style="font-weight: bold;">Site-ul nostru oferă o selecție vastă de componente PC de înaltă calitate,
+                    incluzând:</p>
+                <ol> <!-- 7 -->
                     <li>Placa video</li>
                     <li>Procesor</li>
                     <li>Placa de baza</li>
@@ -74,143 +74,85 @@
                     <li>Carcasa</li>
                     <li>Cooler</li>
                 </ol>
-                <p><strong>Atenție! Efectuarea unei comenzi din partea noastră nu garantează compatibilitatea între mai multe componente. <br> Pentru ajutor specializat, solicitați un tehnician.</strong></p>
-                <p><b>Bonusul</b> e în valoare de <span style="font-weight: bold;"><s>10%.</s> <ins
-                            style="text-decoration: none;">15%</ins></span></p>
-                <p style="font-weight: bold;">Penalizările sunt de 10%.</p>
+                <p><strong>Atenție! Efectuarea unei comenzi din partea noastră nu garantează compatibilitatea între mai
+                        multe componente. <br> Pentru ajutor specializat, solicitați un tehnician.</strong></p>
+                <p>Serviciul de <b>asamblare</b> costa <span style="font-weight: bold;"><s>15%</s> <ins
+                            style="text-decoration: none;">10%</ins></span> din costul comenzii.</p>
+                <p style="font-weight: bold;">Ne rezervăm dreptul de a respinge cereri ale serviciului</p> <!-- 10ac -->
             </section>
             <section>
-                <h3 id="precizari">Alte precizări</h3>
-                <ul>
-                    <li><span style="font-weight: bold;">Conteaza ora la care ati trimis etapa si nu momentul
-                            prezentarii.</span> Puteti trimite etapa si daca e undeva pe la 90% gata sau cu mici buguri
-                        si tot consider bonusul cat timp imi spuneti situatia, si chiar puteti remedia problema pana la
-                        prezentare. (evident nu se considera bonusul pentru o etapa care e abia inceputa sau cu foarte
-                        multe lucruri gresite). De asemenea consider bonusul si daca ati intarziat cateva minute (nu
-                        cateva zile!). Deci incercarea mea e sa nu vedeti deadline-ul ca fiind ceva stresant ci
-                        dimpotriva sa aveti curaj sa trimiteti ce ati lucrat si sa puneti interbari cu privire la ce nu
-                        a mers.</li>
-                    <li><span style="font-weight: bold;">O etapa poate fi prezentata oricand in cadrul
-                            semestrului</span> insa e bine sa prezentati cat mai curand cand aveti codul proaspat in
-                        minte. De asemenea, daca aveti greseli ori lucruri lipsa la o etapa, care ar duce la depunctari,
-                        puteti sa recuperati punctele in etapa urmatoare, daca ati modificat/completat acele lucruri in
-                        cadrul proiectului.</li>
-                    <li><span style="font-weight: bold;">În cazul depunctărilor rezultate din greșeli sau lipsa unor
-                            taskuri, se poate recupera punctajul dacă remediați acele probleme până la prezentările
-                            următoare.</span> Punctele nu sunt pierdute pentru totdeauna, putețî aduce completări în
-                        săptămâna 14 pentru etapa 1 fără a afecta bonusul sau penalizarea etapei deja scrise în tabel.
-                    </li>
-                    <li><span style="font-weight: bold;">Va rog sa trimiteti etapele pe teams</span> (fisierul html), nu
-                        pe mail sau pe site. Cei care au pus proiectul pe github doar imi trimit linkul sau daca l-au
-                        trimis deja, <span style="font-weight: bold;">anunta pe teams ca au facut modificarea (mesajul
-                            cu anuțul trebuie trimis înainte de deadline, ca să pot verifica).</span></li>
-                    <li>Etapele de la 1 incolo trebuie prezentate pentru a lua puncte pe ele.</li>
-                    <li><span style="font-weight: bold;">Bonusurile din cadrul unei etape pot fi rezolvate și mai târziu
-                            fără penalizări</span> (adică puteți, de exemplu să faceți bonusul dupa 3 săptămâni de la
-                        deadline) însă bonusului i se va aplica penalizarea sau bonusul de timp al etapei. De exemplu,
-                        etapa a fost făcută cu bonus de timp, și după 3 săptămâni de la deadline trimiteți și un task
-                        bonus, i se va aplica și lui bonusul de timp al etapei (iar dacă există penalizare de timp i se
-                        va aplica penalizarea). Motivul: încurajarea studentului de a face taskurile obligatorii la
-                        timp..</li>
-                </ul>
+                <h3 id="faq">Întrebări frecvente</h3>
 
-                <section>
-                    <h4>Linkuri utile pentru proiect</h4>
-                    <p style="font-weight: bold;"><a href="https://pixabay.com/">https://pixabay.com/</a> (imagini
-                        gratuite)</p>
-                    <p style="font-weight: bold;"><a href="https://www.videvo.net/">https://www.videvo.net/</a>
-                        (videoclipuri gratuite - cele marcate cu "free")</p>
+                <details><!-- 12 -->
+                    <summary>Care sunt cele mai bune componente PC pentru jocuri?</summary>
+                    <p>Cele mai bune componente PC pentru jocuri includ un procesor de înaltă performanță, o placă
+                        grafică puternică, memorie rapidă și spațiu de stocare suficient. <br> Printre alegerile
+                        populare se numără:</p>
+                    <ul>
+                        <li><i>CPU: </i>Intel Core i7 sau AMD Ryzen 5 și 7</li> <!-- 10b -->
+                        <li><i>GPU: </i>Nvidia GeForce RTX 3070</li>
+                        <li><i>SSD: </i>Samsung sau Corsair</li>
+                    </ul>
+                    <p style="font-weight: bold;">Aceste <i>brand-uri</i> și <i>modele</i> sunt doar orientative și nu
+                        garantează cel mai bun raport intre preț și calitate.</p>
+                </details>
+                <details>
+                    <summary>Cum știu dacă o componentă PC este compatibilă cu sistemul meu?</summary>
+                    <p>Verificați compatibilitatea componentelor PC cu sistemul dumneavoastră prin intermediul
+                        <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker</a>. <br> Acesta este un
+                        serviciu gratuit care vă permite să comparați componente PC și să verificați dacă sunt
+                        compatibile cu sistemul dumneavoastră.
+                    </p>
+                </details>
+                <details>
+                    <summary>Care este diferența dintre un procesor Intel și AMD?</summary>
+                    <p>Procesoarele Intel și AMD sunt cele mai populare alegeri pentru construirea unui PC. <br> Intel
+                        este mai cunoscut pentru performanța sa de înaltă calitate, în timp ce AMD este mai cunoscut
+                        pentru prețul său mai mic. <br> Intel este mai bun pentru jocuri, în timp ce AMD este mai
+                        bun pentru aplicații profesionale.</p>
+                </details>
+                <details>
+                    <summary>Care este diferența dintre un SSD și un HDD?</summary>
+                    <p>SSD-ul este mai rapid și mai silențios decât HDD-ul, dar este mai scump. <br> HDD-ul este mai
+                        ieftin și mai capabil decât SSD-ul, dar este mai lent și mai zgomotos.</p>
+                </details>
+                <details>
+                    <summary>Care este diferența dintre memoria DDR4 și DDR5?</summary>
+                    <p>Memoria DDR4 este mai ieftină decât memoria DDR5, dar este mai puțin capabilă.
+                        <br> Memoria DDR5 este mai rapidă și mai capabilă decât memoria DDR4, dar este mai scumpă.
+                        <br> De asemenea, în funcție de placa de bază, memoria DDR5 poate fi incompatibilă cu restul
+                        sistemului.
+                    </p>
+                </details>
+                <section> <!-- 6 -->
+                    <h4>Linkuri utile</h4> <!-- 11 -->
+                    <p style="font-weight: bold;"><a href="https://pcpartpicker.com/"
+                            target="_blank">https://pcpartpicker.com/</a> (verificare compatibilitate componente)</p>
+                    <p style="font-weight: bold;">
+                        <a href="./resurse/imagini/gpu-perf-graph.jpg" download>
+                            Grafic orientativ performanță GPU
+                        </a>(download .jpg)
+                    </p>
+                    <a href="https://www.youtube.com/embed/BL4DCEp7blY" target="ifr-video">Tutorial complet
+                        asamblare</a>
+                    <a href="https://www.youtube.com/embed/RYYoCXh2gtw" target="ifr-video">Ghid setări</a>
+                    <a href="https://www.youtube.com/embed/XqY-BL5pLjQ" target="ifr-video">Programe importante</a>
+                    <br>
+                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/BL4DCEp7blY"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </section>
             </section>
         </section>
-        <!-- <section> 
-            <h2 id="etape">Etapele proiectului</h2>
-            <table style="border: 1px solid black; border-collapse: collapse;">
-                <thead>
-                    <tr style="vertical-align: top; border: 1px solid black;">
-                        <th style="border: inherit;">Etapa</th>
-                        <th style="border: inherit;">Perioada bonus</th>
-                        <th style="border: inherit;">Perioada punctaj normal</th>
-                        <th style="border: inherit; max-width: 200px;">De când încep penalizările săptămânale</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="vertical-align: top; border: 1px solid black; background-color: #c7d4db;">
-                        <td style="border: inherit; font-weight: bold;">Etapa 0 (0.3)</td>
-                        <td style="border: inherit;">-</td>
-                        <td style="border: inherit; max-width: 200px;">nu are bonus: se trimite pana la 27.02.2022
-                            fiindca daca nu aveti tema de proiect nu aveti cum sa lucrati la etapele urmatoare</td>
-                        <td style="border: inherit;"></td>
-                    </tr>
-                    <tr style="border: 1px solid black;">
-                        <td colspan="4" style="border: inherit;">
-                            <p style="font-weight: bold;">Taskuri etapa 0 (0.3)</p>
-                            <ol>
-                                <li>Alegerea temei</li>
-                                <li>
-                                    Descrierea succintă a temei (google docs, 1/2-1 pagina). Va contine următoarele
-                                    informații:
-                                    <ol style="list-style-type: lower-latin;">
-                                        <li>(0.02) Impartirea informatiilor, serviciilor etc. pe categorii si
-                                            subcategorii.</li>
-                                        <li>(0.03) Identificarea efectiva a paginilor (încercați să fie doar 4-5) și
-                                            partial a legaturilor dintre ele (ce informatii vor avea pagini separate si
-                                            care informații vor fi subsecțiuni în aceeași pagină</li>
-                                        <li>(0.05) Stabilirea cuvintelor/sintagmelor cheie (o lista cu cuvintele cheie
-                                            ale site-ului cât și cate o lista pentru fiecare pagină în parte)</li>
-                                        <li>(0.2) Căutarea unor site-uri similare (4-5 site-uri) ca tema pentru a
-                                            observa modul de organizare a informației. Veti observa pentru ficare site
-                                            cum au impartit informatiile si cum au facut designul. Veti nota pentru
-                                            fiecare site ideile demne de implementat, dar și neajunsurile acelor
-                                            site-uri (pentru fiecare site minim 2 lucruri pro si 2 contra). Veți pune
-                                            linkuri către ele în fișier.</li>
-                                    </ol>
-                                </li>
-
-                            </ol>
-                        </td>
-                    </tr>
-                    <tr style="vertical-align: top; border: 1px solid black; background-color: #c7d4db;">
-                        <td style="border: inherit; font-weight: bold;">Etapa 1 (punctaj recomandat 0.5) - <span
-                                style="color: red;">cerinta inca in decurs de completare</span></td>
-                        <td style="border: inherit;">20.02.2022 - 27.02.2022</td>
-                        <td style="border: inherit;">28.02.2022 - 06.03.2022</td>
-                        <td style="border: inherit;">07.03.2022</td>
-                    </tr>
-                    <tr style="border: 1px solid black;">
-                        <td colspan="4" style="border: inherit;">
-                            <p style="font-weight: bold;">Taskuri etapa 1 (punctaj recomandat 0.5)</p>
-                            <p>Creați prima pagină a site-ului (<span style="font-weight: bold;">doar prima pagină; fără
-                                    stilizare</span> încă, fiindcă veți primi taskuri legate de acest aspect). Puteți
-                                pune în această pagină text care va fi mutat în alte pagini, mai târziu, dar <span
-                                    style="font-weight: bold;">nu faceți încă mai multe pagini fiindcă le vom genera
-                                    prin Node!</span> La prezentare vă rog să aveți pentru fiecare task notată linia din
-                                program la care l-ați rezolvat ca să nu dureze prezentarea mai mult de 3-4 minute.</p>
-                            <ol>
-                                <li>Creați un folder al proiectului care va cuprinde toate fisierele necesare site-ului
-                                    vostru. Creați în el un fisier numit index.html. Deschideți acest fișier cu un
-                                    editor de text care marchează sintaxa. Adăugați în fișier doctype și setați limba
-                                    documentului în tagul html</li>
-                                <li>Adaugati un title corespunzător conținutului textului. Folosiți 4 taguri meta
-                                    relevante pentru a specifica: charset-ul, autorul, cuvintele cheie, descrierea.</li>
-                            </ol>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus hic officia dolorem fugit
-                beatae? Sed, asperiores et! Aliquam non, ullam repudiandae inventore laborum doloribus harum pariatur,
-                omnis, nemo ut ducimus.</p>
-        </section>-->
     </main>
     <footer>
-        <address>
+        <address><!-- 13 -->
             <a href="mailto:compconn@fake.mail">Trimite un mail</a>
             <a href="tel:0799999999">Telefon</a>
-            <a href="https://goo.gl/maps/vVouBGVBBJB1FH1TA" target="_blank">Adresa</a>
             <a href="https://wa.link/u5l6os" target="_blank">Whatsapp</a>
+            <a href="https://goo.gl/maps/vVouBGVBBJB1FH1TA" target="_blank">Adresa</a>
         </address>
-        <small>Copyright &copy; <time datetime="2023-02-28">28 feb 2023</time></small>
+        <small>Copyright &copy; <time datetime="2023-03-01">01 mar 2023</time></small><!-- 14 -->
         <br>
         <a href="#">Link top</a>
     </footer>
