@@ -17,9 +17,18 @@ h2~p{
     font-size: 30px;
 }
 
+html{
+    font-size: 18px;
+}
+
 body{
     --culoare-fundal:rgb(255,219,235);
     --culoare-text:black;
+    --spatiere-pagina: 50px;
+    --padding-sectiune: 15px;
+    --culoare-fundal-inchis:#C886FF;
+    margin: 0;
+    
 }
 
 body.dark{
@@ -31,7 +40,20 @@ body.dark{
 body{
     background-color: var(--culoare-fundal);
     color: var(--culoare-text);
+    padding-left: var(--spatiere-pagina);
+    padding-right: var(--spatiere-pagina);
+    min-width: 450px;
 }
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+
 
 #grid-pagina{
     display: grid;
@@ -43,10 +65,12 @@ body{
                         "z-fig3 z-orar z-orar"
                         "z-anunturi z-anunturi z-anunturi"
                         "z-index-intrebari z-index-intrebari z-index-intrebari";
+    gap: 20px 10px;
 }
 
 #grid-pagina > *{
     border: 3px solid blue;
+    padding: var(--padding-sectiune);
 }
 
 #welcome{
@@ -79,4 +103,9 @@ body{
  
 #index-intrebari{
     grid-area: z-index-intrebari;
+}
+
+img{
+    width: 100%;
+    max-width: 400px;
 }
