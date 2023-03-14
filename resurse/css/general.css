@@ -1,0 +1,177 @@
+/* schema cromatica */
+body {
+    /*
+    albastru este culoarea principala, culoare rece asociata chestiilor electronice, tehnologie, internet, etc.
+    culorile de fundal sunt mai monotone, pentru a nu aglomera site-ul
+    */
+    --culoare-inchisa: #4F4A80;
+    --culoare-deschisa: #586F8C;
+    --culoare-main: #495B73;
+    --culoare-fundal: #F2F2F2;
+    --culoare-fundal-inchis: #262625;
+
+    --culoare-highlight: #9DC6FA;
+    --culoare-highlight2: #8494E3;
+    --culoare-text: black;
+    --spatiere-pagina: 30px;
+    --padding-sectiune: 15px;
+}
+
+body {
+    background-color: var(--culoare-fundal);
+    color: var(--culoare-text);
+    padding-left: var(--spatiere-pagina);
+    padding-right: var(--spatiere-pagina);
+    min-width: 450px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body p{
+    transition: font-size 1s;
+}
+
+h2~p {
+    font-size: 30px;
+}
+
+html {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#grid-pagina {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "z-banner z-banner z-banner z-banner"
+        "z-banner z-banner z-banner z-banner"
+        "z-online z-dateutilizator z-dateutilizator z-dateserver"
+        "z-calendar z-calendar z-tabel z-tabel"
+        "z-anunturi z-anunturi z-tabel z-tabel"
+        "z-other z-other z-other z-other";
+    gap: 20px 10px;
+}
+
+#grid-pagina>* {
+    padding: var(--padding-sectiune);
+    border: 2px solid var(--culoare-main);
+}
+
+#banner {
+    grid-area: z-banner;
+}
+
+#online {
+    grid-area: z-online;
+}
+
+#dateutilizator {
+    grid-area: z-dateutilizator;
+}
+
+#dateserver {
+    grid-area: z-dateserver;
+}
+
+#calendar {
+    grid-area: z-calendar;
+}
+
+#tabel {
+    grid-area: z-tabel;
+}
+
+#anunturi {
+    grid-area: z-anunturi;
+}
+
+#other {
+    grid-area: z-other;
+}
+
+img {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+main {
+    margin-top: 100px;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--culoare-deschisa);
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--culoare-inchisa);
+}
+
+caption{
+    caption-side: bottom;
+}
+
+td:empty{
+    display: none;
+}
+
+td:nth-child(even), th:nth-child(even) {
+    background-color: var(--culoare-main);
+}
+
+td:nth-child(odd), th:nth-child(odd) {
+    background-color: var(--culoare-deschisa);
+}
+
+td{
+    transition: background-color 0.5s;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: fit-content;
+}
+
+.tabel-container{
+    width: 100%;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+caption{
+    background-color: var(--culoare-main);
+    color: var(--culoare-fundal);
+    font-weight: bold;
+}
+
+tr:hover td{
+    background-color: var(--culoare-highlight);
+}
+
+tr td:hover{
+    background-color: var(--culoare-highlight2);
+}
+
+td, th, caption{
+    padding: 5px;
+    
+}
+
+iframe{
+    max-width: 100%;
+}

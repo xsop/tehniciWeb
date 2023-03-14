@@ -1,0 +1,25 @@
+html{
+    font-size: 14px;
+}
+
+body{
+    --spatiere-pagina: 10px;
+    --padding-sectiune: 5px;
+}
+
+body{
+    animation-play-state: paused;
+}
+
+#grid-pagina{
+    display: block;
+
+}
+
+#grid-pagina > *{
+    margin-bottom: 15px;
+}
+
+.tabel-container{
+    overflow-x: scroll;
+}

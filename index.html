@@ -1,8 +1,8 @@
-<!DOCTYPE html> <!-- 1 -->
+<!DOCTYPE html>
 <html lang="ro">
 
 <head> 
-    <title>Component Connection - Magazin componente PC</title> <!-- 2 -->
+    <title>Component Connection - Magazin componente PC</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords"
@@ -22,11 +22,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./resurse/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
+    <!-- end favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="resurse/css/general.css">
+    <link rel="stylesheet" href="resurse/css/general1000.css" media="screen and (max-width:1000px)">
+    <link rel="stylesheet" href="resurse/css/general700.css" type="text/css" media="screen and (max-width:700px)" />
 </head>
 
 <body>
-    <header> <!-- 5 -->
+    <header>
         <h1>Component Connection</h1>
         <nav>
             <ul>
@@ -44,13 +51,8 @@
         </nav>
     </header>
     <main>
-        <section> <!-- 6 -->
-            <h2 id="welcome">Bine ați venit!</h2>
-            <p>Bine ați venit la Component Connection, destinația finală pentru toate nevoile dumneavoastră în materie
-                de componente PC. Suntem o echipă de entuziaști dedicați PC-ului care înțeleg importanța de a avea
-                componentele potrivite pentru a vă construi calculatorul de vis. Fie că sunteți un jucător experimentat,
-                un creator de conținut sau un profesionist în afaceri, noi vă acoperim.</p> <!-- 9 -->
-            <figure> <!-- 8 -->
+        <div id="grid-pagina">
+            <figure id="banner">
                 <picture>
                     <source media="(max-width: 800px)" srcset="./resurse/imagini/regnum-rg6v-exp-400x226.png">
                     <source media="(max-width: 1600px)" srcset="./resurse/imagini/regnum-rg6v-exp-800x451.png">
@@ -59,100 +61,170 @@
                 </picture>
                 <figcaption>Desfasurare Carcasa</figcaption>
             </figure>
-
-            <section>
-                <h3 id="componente">Componente</h3>
-                <p style="font-weight: bold;">Site-ul nostru oferă o selecție vastă de componente PC de înaltă calitate,
-                    incluzând:</p>
-                <ol> <!-- 7 -->
-                    <li>Placa video</li>
-                    <li>Procesor</li>
-                    <li>Placa de baza</li>
-                    <li>Memorii RAM</li>
-                    <li>HDD si SSD</li>
-                    <li>Sursa</li>
-                    <li>Carcasa</li>
-                    <li>Cooler</li>
-                </ol>
-                <p><strong>Atenție! Efectuarea unei comenzi din partea noastră nu garantează compatibilitatea între mai
-                        multe componente. <br> Pentru ajutor specializat, solicitați un tehnician.</strong></p>
-                <p>Serviciul de <b>asamblare</b> costa <span style="font-weight: bold;"><s>15%</s> <ins
-                            style="text-decoration: none;">10%</ins></span> din costul comenzii.</p>
-                <p style="font-weight: bold;">Ne rezervăm dreptul de a respinge cereri ale serviciului</p> <!-- 10ac -->
+            <section id="online">
+                <p>Utilizatori online: <span id="utilizatori-online">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, deleniti repellat. Ea deleniti nihil iusto consequuntur dolores cum itaque ad veritatis culpa tempora eos fuga quisquam, sit asperiores quos. Distinctio.</span></p>
             </section>
-            <section>
-                <h3 id="faq">Întrebări frecvente</h3>
-
-                <details><!-- 12 -->
-                    <summary>Care sunt cele mai bune componente PC pentru jocuri?</summary>
-                    <p>Cele mai bune componente PC pentru jocuri includ un procesor de înaltă performanță, o placă
-                        grafică puternică, memorie rapidă și spațiu de stocare suficient. <br> Printre alegerile
-                        populare se numără:</p>
-                    <ul>
-                        <li><i>CPU: </i>Intel Core i7 sau AMD Ryzen 5 și 7</li> <!-- 10b -->
-                        <li><i>GPU: </i>Nvidia GeForce RTX 3070</li>
-                        <li><i>SSD: </i>Samsung sau Corsair</li>
-                    </ul>
-                    <p style="font-weight: bold;">Aceste <i>brand-uri</i> și <i>modele</i> sunt doar orientative și nu
-                        garantează cel mai bun raport intre preț și calitate.</p>
-                </details>
-                <details>
-                    <summary>Cum știu dacă o componentă PC este compatibilă cu sistemul meu?</summary>
-                    <p>Verificați compatibilitatea componentelor PC cu sistemul dumneavoastră prin intermediul
-                        <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker</a>. <br> Acesta este un
-                        serviciu gratuit care vă permite să comparați componente PC și să verificați dacă sunt
-                        compatibile cu sistemul dumneavoastră.
-                    </p>
-                </details>
-                <details>
-                    <summary>Care este diferența dintre un procesor Intel și AMD?</summary>
-                    <p>Procesoarele Intel și AMD sunt cele mai populare alegeri pentru construirea unui PC. <br> Intel
-                        este mai cunoscut pentru performanța sa de înaltă calitate, în timp ce AMD este mai cunoscut
-                        pentru prețul său mai mic. <br> Intel este mai bun pentru jocuri, în timp ce AMD este mai
-                        bun pentru aplicații profesionale.</p>
-                </details>
-                <details>
-                    <summary>Care este diferența dintre un SSD și un HDD?</summary>
-                    <p>SSD-ul este mai rapid și mai silențios decât HDD-ul, dar este mai scump. <br> HDD-ul este mai
-                        ieftin și mai capabil decât SSD-ul, dar este mai lent și mai zgomotos.</p>
-                </details>
-                <details>
-                    <summary>Care este diferența dintre memoria DDR4 și DDR5?</summary>
-                    <p>Memoria DDR4 este mai ieftină decât memoria DDR5, dar este mai puțin capabilă.
-                        <br> Memoria DDR5 este mai rapidă și mai capabilă decât memoria DDR4, dar este mai scumpă.
-                        <br> De asemenea, în funcție de placa de bază, memoria DDR5 poate fi incompatibilă cu restul
-                        sistemului.
-                    </p>
-                </details>
-                <section> <!-- 6 -->
-                    <h4>Linkuri utile</h4> <!-- 11 -->
-                    <p style="font-weight: bold;"><a href="https://pcpartpicker.com/"
-                            target="_blank">https://pcpartpicker.com/</a> (verificare compatibilitate componente)</p>
-                    <p style="font-weight: bold;">
-                        <a href="./resurse/imagini/gpu-perf-graph.jpg" download>
-                            Grafic orientativ performanță GPU
-                        </a>(download .jpg)
-                    </p>
-                    <a href="https://www.youtube.com/embed/BL4DCEp7blY" target="ifr-video">Tutorial complet
-                        asamblare</a>
-                    <a href="https://www.youtube.com/embed/RYYoCXh2gtw" target="ifr-video">Ghid setări</a>
-                    <a href="https://www.youtube.com/embed/XqY-BL5pLjQ" target="ifr-video">Programe importante</a>
-                    <br>
-                    <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/BL4DCEp7blY"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <section id="dateutilizator">
+                <p>Utilizator: <span id="utilizator">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae ullam suscipit, earum incidunt libero ipsa? Maiores odit nostrum eveniet neque animi, aspernatur, exercitationem voluptatem corporis, aliquid earum sapiente error?</span></p>
+            </section>
+            <section id="dateserver">
+                <p>Date despre server: <span id="server">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nesciunt labore, culpa minima unde optio? Alias voluptatum quaerat consequuntur facilis officia iste odit sunt nulla, sequi cumque dicta, facere consectetur!</span></p>
+            </section>
+            <section id="calendar">
+                <p>Calendar</p><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aliquid veniam totam laboriosam rerum nisi animi eligendi alias doloremque dolorum error quidem quibusdam, molestias omnis ratione, magni repellendus odit? Modi.</p>
+            </section>
+            <section id="anunturi">
+                <p>Anunturi</p><br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eos! Beatae libero placeat minima vero cum sint! Adipisci placeat quod laboriosam iure. Sunt est nesciunt, odit quod architecto fuga quis.</p>
+            </section>
+            <section id="tabel">
+                <div class="tabel-container">
+                    <table>
+                        <caption>Date lansare</caption>
+                        <thead>
+                        <tr>
+                            <th>Tip</th>
+                            <th>Data</th>
+                            <th>Produs</th>
+                            <th colspan="2">Descriere</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Data sigură</td>
+                            <td>6 Aprilie 2023</td>
+                            <td>AMD Ryzen 7 7800X3D</td>
+                            <td>Se vehiculeaza un MSRP de $449</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Data neanunțată</td>
+                            <td>Vara 2023</td>
+                            <td>NVIDIA GeForce RTX 4060</td>
+                            <td>Performanță similară cu RTX 3070</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2023</td>
+                            <td>NVIDIA GeForce RTX 4060 Ti </td>
+                            <td>Acelasi procesor grafic cu non-ti, AD106</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>2023</td>
+                            <td>AMD Radeon RX 7600 XT </td>
+                            <td>Procesor grafic Navi 33</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5">Aceste date sunt susceptibile la diverse modificări și trebuie considerate doar orientativ.</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <section id="other">
+                <section id="welcome">
+                    <h2 id="welcome">Bine ați venit!</h2>
+            <p>Bine ați venit la Component Connection, destinația finală pentru toate nevoile dumneavoastră în materie
+                de componente PC. Suntem o echipă de entuziaști dedicați PC-ului care înțeleg importanța de a avea
+                componentele potrivite pentru a vă construi calculatorul de vis. Fie că sunteți un jucător experimentat,
+                un creator de conținut sau un profesionist în afaceri, noi vă acoperim.</p>
+                </section>
+                <section>
+                    <h3 id="componente">Componente <span class="fa-solid fa-microchip"></span></h3>
+                    <p style="font-weight: bold;">Site-ul nostru oferă o selecție vastă de componente PC de înaltă calitate,
+                        incluzând:</p>
+                    <ol>
+                        <li>Placa video</li>
+                        <li>Procesor</li>
+                        <li>Placa de baza</li>
+                        <li>Memorii RAM</li>
+                        <li>HDD si SSD</li>
+                        <li>Sursa</li>
+                        <li>Carcasa</li>
+                        <li>Cooler</li>
+                    </ol>
+                    <p><span class="fa-solid fa-triangle-exclamation fa-fade"></span> <strong>Atenție! Efectuarea unei comenzi din partea noastră nu garantează compatibilitatea între mai
+                            multe componente. <br> Pentru ajutor specializat, solicitați un tehnician.</strong></p>
+                    <p>Serviciul de <b>asamblare</b> costa <span style="font-weight: bold;"><s>15%</s> <ins
+                                style="text-decoration: none;">10%</ins></span> din costul comenzii.</p>
+                    <p style="font-weight: bold;">Ne rezervăm dreptul de a respinge cereri ale serviciului</p>
+                </section>
+                <section>
+                    <h3 id="faq">Întrebări frecvente</h3>
+    
+                    <details>
+                        <summary>Care sunt cele mai bune componente PC pentru jocuri?</summary>
+                        <p>Cele mai bune componente PC pentru jocuri includ un procesor de înaltă performanță, o placă
+                            grafică puternică, memorie rapidă și spațiu de stocare suficient. <br> Printre alegerile
+                            populare se numără:</p>
+                        <ul>
+                            <li><i>CPU: </i>Intel Core i7 sau AMD Ryzen 5 și 7</li> 
+                            <li><i>GPU: </i>Nvidia GeForce RTX 3070</li>
+                            <li><i>SSD: </i>Samsung sau Corsair</li>
+                        </ul>
+                        <p style="font-weight: bold;">Aceste <i>brand-uri</i> și <i>modele</i> sunt doar orientative și nu
+                            garantează cel mai bun raport intre preț și calitate.</p>
+                    </details>
+                    <details>
+                        <summary>Cum știu dacă o componentă PC este compatibilă cu sistemul meu?</summary>
+                        <p>Verificați compatibilitatea componentelor PC cu sistemul dumneavoastră prin intermediul
+                            <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker</a>. <br> Acesta este un
+                            serviciu gratuit care vă permite să comparați componente PC și să verificați dacă sunt
+                            compatibile cu sistemul dumneavoastră.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre un procesor Intel și AMD?</summary>
+                        <p>Procesoarele Intel și AMD sunt cele mai populare alegeri pentru construirea unui PC. <br> Intel
+                            este mai cunoscut pentru performanța sa de înaltă calitate, în timp ce AMD este mai cunoscut
+                            pentru prețul său mai mic. <br> Intel este mai bun pentru jocuri, în timp ce AMD este mai
+                            bun pentru aplicații profesionale.</p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre un SSD și un HDD?</summary>
+                        <p>SSD-ul este mai rapid și mai silențios decât HDD-ul, dar este mai scump. <br> HDD-ul este mai
+                            ieftin și mai capabil decât SSD-ul, dar este mai lent și mai zgomotos.</p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre memoria DDR4 și DDR5?</summary>
+                        <p>Memoria DDR4 este mai ieftină decât memoria DDR5, dar este mai puțin capabilă.
+                            <br> Memoria DDR5 este mai rapidă și mai capabilă decât memoria DDR4, dar este mai scumpă.
+                            <br> De asemenea, în funcție de placa de bază, memoria DDR5 poate fi incompatibilă cu restul
+                            sistemului.
+                        </p>
+                    </details>
+                    <section>
+                        <h4>Linkuri utile</h4>
+                        <p style="font-weight: bold;"><a href="https://pcpartpicker.com/"
+                                target="_blank">https://pcpartpicker.com/</a> (verificare compatibilitate componente)</p>
+                        <p style="font-weight: bold;">
+                            <a href="./resurse/imagini/gpu-perf-graph.jpg" download>
+                                Grafic orientativ performanță GPU
+                            </a>(download .jpg)
+                        </p>
+                        <a href="https://www.youtube.com/embed/BL4DCEp7blY" target="ifr-video">Tutorial complet
+                            asamblare</a>
+                        <a href="https://www.youtube.com/embed/RYYoCXh2gtw" target="ifr-video">Ghid setări</a>
+                        <a href="https://www.youtube.com/embed/XqY-BL5pLjQ" target="ifr-video">Programe importante</a>
+                        <br>
+                        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/BL4DCEp7blY"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </section>
                 </section>
             </section>
-        </section>
+            
+        </div>
     </main>
     <footer>
-        <address><!-- 13 -->
+        <address>
             <a href="mailto:compconn@fake.mail">Trimite un mail</a>
             <a href="tel:0799999999">Telefon</a>
             <a href="https://wa.link/u5l6os" target="_blank">Whatsapp</a>
             <a href="https://goo.gl/maps/vVouBGVBBJB1FH1TA" target="_blank">Adresa</a>
         </address>
-        <small>Copyright &copy; <time datetime="2023-03-01">01 mar 2023</time></small><!-- 14 -->
+        <small>Copyright &copy; <time datetime="2023-03-01">01 mar 2023</time></small>
         <br>
         <a href="#">Link top</a>
     </footer>
