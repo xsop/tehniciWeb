@@ -1,4 +1,3 @@
-/* schema cromatica */
 body {
     /*
     albastru este culoarea principala, culoare rece asociata chestiilor electronice, tehnologie, internet, etc.
@@ -13,8 +12,14 @@ body {
     --culoare-highlight: #9DC6FA;
     --culoare-highlight2: #8494E3;
     --culoare-text: black;
+    --culoare-gri: #BDBDBD;
     --spatiere-pagina: 30px;
     --padding-sectiune: 15px;
+
+
+    --latime-buton: 100px;
+    --inaltime-buton: 50px;
+    --blur-buton: 12px;
 }
 
 body {
@@ -44,6 +49,14 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin-bottom: 0.5em;
+}
+
+li{
+    margin: 1em;
 }
 
 #grid-pagina {
@@ -100,8 +113,8 @@ img {
     max-height: 500px;
 }
 
-main {
-    margin-top: 100px;
+main, header {
+    margin-top: 50px;
 }
 
 #banner {
@@ -127,6 +140,7 @@ caption{
 
 td:empty{
     display: none;
+
 }
 
 td:nth-child(even), th:nth-child(even) {
@@ -173,5 +187,70 @@ td, th, caption{
 }
 
 iframe{
-    max-width: 100%;
+    width: 100%;
+    max-width: 600px;
+    border: 5px solid var(--culoare-deschisa);
+}
+
+.link-iframe{
+    width: var(--latime-buton);
+    height: var(--inaltime-buton);
+    background: var(--culoare-deschisa);
+    text-align: center;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: var(--culoare-highlight);
+    transition: background-color 0.3s linear;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: var(--blur-buton);
+
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 3px;
+    border: 2px solid var(--culoare-highlight);
+    border-right: 0;
+
+    box-shadow: inset var(--blur-buton) 0px 12px -2px var(--culoare-highlight);
+    
+}
+
+.link-iframe:hover{
+    background: var(--culoare-highlight);
+    color:var(--culoare-main);
+}
+
+.iframe-container{
+    display: flex;
+}
+
+.taburi-iframe{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.link-top {
+    display: block;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+    opacity: 0.4;
+    width: 3rem;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 2.6rem;
+    text-align: center;
+    border: 2px solid var(--culoare-fundal-inchis);
+    border-radius: 50%;
+    background: var(--culoare-inchisa);
+    color: var(--culoare-fundal-inchis);
+    font-size: 2rem;
+    transition: opacity 0.3s;
+    box-shadow: 0 0 0.5rem var(--culoare-fundal-inchis);
+}
+
+.link-top:hover{
+    opacity: 1;
 }
