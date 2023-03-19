@@ -20,6 +20,7 @@ body {
     --latime-buton: 100px;
     --inaltime-buton: 50px;
     --blur-buton: 12px;
+    --border-radius: 10px;
 }
 
 body {
@@ -55,10 +56,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol{
     margin-bottom: 0.5em;
 }
 
-li{
-    margin: 1em;
-}
-
 #grid-pagina {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -69,11 +66,6 @@ li{
         "z-anunturi z-anunturi z-tabel z-tabel"
         "z-other z-other z-other z-other";
     gap: 20px 10px;
-}
-
-#grid-pagina>* {
-    padding: var(--padding-sectiune);
-    border: 2px solid var(--culoare-main);
 }
 
 #banner {
@@ -111,10 +103,23 @@ li{
 img {
     max-width: 100%;
     max-height: 500px;
+    max-width: 600px;
+    min-width: 200px;
 }
 
-main, header {
-    margin-top: 50px;
+main, header, footer, nav {
+    margin-top: 25px;
+}
+
+#grid-pagina>*, header, footer {
+    padding: var(--padding-sectiune);
+    border: 2px solid var(--culoare-main);
+    border-radius: var(--border-radius);
+    box-shadow: 0px 5px 20px 0px var(--culoare-fundal-inchis);
+}
+
+footer{
+    margin-bottom: 25px;;
 }
 
 #banner {
@@ -163,7 +168,7 @@ table{
 
 .tabel-container{
     width: 100%;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     overflow-x: auto;
 }
 
@@ -189,7 +194,9 @@ td, th, caption{
 iframe{
     width: 100%;
     max-width: 600px;
+    min-width: 200px;
     border: 5px solid var(--culoare-deschisa);
+    display: block;
 }
 
 .link-iframe{
@@ -207,7 +214,7 @@ iframe{
     align-items: center;
     padding-left: var(--blur-buton);
 
-    border-radius: 10px 0 0 10px;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
     margin-bottom: 3px;
     border: 2px solid var(--culoare-highlight);
     border-right: 0;

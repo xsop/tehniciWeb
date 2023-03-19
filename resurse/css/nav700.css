@@ -1,0 +1,54 @@
+body{
+    --inaltime-meniu: 50px;
+    --latime-buton: 100%;
+}
+
+#hamburger {
+    display: block;
+}
+
+.hamburger{
+    height: var(--inaltime-meniu);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: var(--padding-sectiune);
+}
+
+.hamburger-line{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: var(--culoare-text);
+    margin: 3px 0;
+    border-radius: 5px;
+    
+}
+
+ul.meniu{
+    display: none;
+}
+
+#ch-menu:checked + ul.meniu{
+    display: block;
+    animation-name: text_spatiu;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes text_spatiu {
+    0%{
+        letter-spacing: -10px;
+    }
+    100%{
+        letter-spacing: normal;
+    }
+    
+}
+
+ul.meniu>li:hover{
+    text-shadow: none;
+}
