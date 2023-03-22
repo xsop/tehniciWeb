@@ -34,9 +34,11 @@
     <link rel="stylesheet" href="resurse/css/general.css">
     <link rel="stylesheet" href="resurse/css/general1000.css" media="screen and (max-width:1000px)">
     <link rel="stylesheet" href="resurse/css/general700.css" type="text/css" media="screen and (max-width:700px)">
-    <link rel="stylesheet" href="resurse/scss/nav.css">
+    <link rel="stylesheet" href="resurse/css/nav.css">
     <link rel="stylesheet" href="resurse/css/nav1000.css" media="screen and (max-width:1000px)">
     <link rel="stylesheet" href="resurse/css/nav700.css" type="text/css" media="screen and (max-width:700px)">
+
+    <link rel="stylesheet" href="resurse/css/print.css" type="text/css" media="print">
     <!-- end css -->
 </head>
 
@@ -47,11 +49,11 @@
     <nav>
         <label id="hamburger" for="ch-menu">
             
-            <div class="hamburger">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </div>
+            <span class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
 
         </label>
         <input id="ch-menu" type="checkbox">
@@ -269,7 +271,12 @@
 
         </div>
     </main>
+    <div class="watermark">
+        <div>Paun</div>
+        <div>Stefan</div>
+    </div>
     <footer>
+        <p id="scolar">Acesta este un proiect școlar!</p>
         <address>
             <a href="mailto:compconn@fake.mail">Trimite un mail</a>
             <a href="tel:0799999999">Telefon</a>

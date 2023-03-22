@@ -1,0 +1,102 @@
+#scolar {
+    border: inset black 4px;
+    width: 70%;
+    display: flex;
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div, section {
+    break-inside: avoid;
+  }
+
+header {
+    padding-top: 40px;
+}
+
+nav{
+    page-break-after: always;
+}
+
+ul.meniu,ul.meniu li div, ul.meniu li a,ul.meniu li,ul.meniu>li,ul.meniu ul, nav{
+    all: unset !important;
+}
+
+#acasa-mediu, .link-top {
+    display: none !important;
+}
+
+#grid-pagina > *, header, footer{
+    margin-top: 15px;
+    box-shadow: none;
+}
+
+ul.meniu ul, ul.meniu li{
+    display: block !important;
+    position: relative !important;
+    left: 1cm !important;
+}
+
+ul.meniu > li > ul > li{
+    display: none !important;
+}
+
+footer{
+    page-break-before: always;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+video, iframe, image, .iframe, .link-iframe, .taburi-iframe, figure {
+    display: none;
+}
+
+#grid-pagina{
+    display: block;
+}
+
+@page {
+    size: A4 portrait;
+    margin-bottom:2cm;
+    margin-top:2cm;
+    counter-increment: page;
+
+}
+
+@page:left{
+
+    margin-left:3cm;
+    margin-right:1cm;
+}
+
+@page:right{
+
+    margin-right:3cm;
+    margin-left:1cm;
+}
+
+.watermark {
+    display: block;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    width: 4cm;
+    height: 1cm;
+    opacity: 0.4;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    border: solid 3px black;
+    border-radius: var(--border-radius);
+}

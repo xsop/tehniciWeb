@@ -49,6 +49,6 @@ ul.meniu{
     
 }
 
-ul.meniu>li:hover{
+ul.meniu > li:hover{
     text-shadow: none;
 }
