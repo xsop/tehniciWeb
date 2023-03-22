@@ -261,3 +261,7 @@ iframe{
 .link-top:hover{
     opacity: 1;
 }
+
+.watermark{
+    display: none;
+}
