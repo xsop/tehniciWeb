@@ -1,5 +1,6 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 obGlobal = {
     obErori: null,
     obImagini: null
@@ -10,13 +11,26 @@ console.log("Folder proiect: " + __dirname);
 console.log("Cale fisier: " + __filename);
 console.log("Director de lucru: " + process.cwd());
 
+vectorFoldere=["temp","temp1"];
+for(let folder of vectorFoldere){
+    //let caleFolder = __dirname + "/" + folder;
+    caleFolder = path.join(__dirname, folder);
+    if(!fs.existsSync(caleFolder)){
+        fs.mkdirSync(caleFolder);
+    }
+}
+
 app.set("view engine", "ejs");
 
 app.use("/resurse", express.static(__dirname + "/resurse"));
 
-app.use((/^\/resurse(\/(?=[a-zA-Z0-9])+[a-zA-Z0-9]*)*/), function(req, res) {
+app.use(/^\/resurse(\/[a-zA-Z0-9]*)*$/, function(req, res) {
    afisareEroare(res, 403);
 });
+
+app.get("/favicon.ico", function(req, res) {
+    res.sendFile(__dirname + "/resurse/imagini/favicon.ico");
+})
 
 app.get("/ceva", function(req, res) {
     console.log("cale: " + req.url);
@@ -31,23 +45,35 @@ app.get(["/index","/","/home"], function(req, res) {
 /*app.get("/despre", function(req, res) {
     res.render("pagini/despre");
 })*/
+//^\w+\.ejs$ - regex pentru nume de fisiere .ejs
+app.get("/*.ejs", function(req, res) {
+    afisareEroare(res, 400);
+})
 
 app.get("/*",function(req, res){
-    res.render("pagini"+req.url, function(err, rezRandare){
-        if(err){
-            console.log(err);
-            if(err.message.startsWith("Failed to lookup view"))
-                //afisareEroare(res,{_identificator:404, _titlu:"ceva"});
-                afisareEroare(res,404,"ceva");
-            else
-                afisareEroare(res);
-        }
-        else{
-            console.log(rezRandare);
-            res.send(rezRandare);
-        }
-    } );
+    try{
+        res.render("pagini"+req.url, function(err, rezRandare){
+            if(err){
+                console.log(err);
+                if(err.message.startsWith("Failed to lookup view"))
+                    //afisareEroare(res,{_identificator:404, _titlu:"ceva"});
+                    afisareEroare(res,404,"ceva");
+                else
+                    afisareEroare(res);
+            }
+            else{
+                console.log(rezRandare);
+                res.send(rezRandare);
+            }
+        } ); 
+    }catch(err){
+            if(err.message.startsWith("Cannot find module"))
+                    afisareEroare(res,404);
+                else
+                    afisareEroare(res);
+    } 
 })
+
 
 
 function initErori(){
@@ -88,4 +114,3 @@ function afisareEroare(res, _identificator, _titlu="titlu default", _text, _imag
 
 app.listen(8080);
 console.log("Serverul a pornit pe portul 8080");
-
