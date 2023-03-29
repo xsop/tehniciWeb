@@ -56,6 +56,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol{
     margin-bottom: 0.5em;
 }
 
+
+
+
 #grid-pagina {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -265,3 +268,53 @@ iframe{
 .watermark{
     display: none;
 }
+
+main a{
+    background-position: center;
+    background-size: 0;
+    background-repeat: no-repeat;
+}
+
+main a:hover{
+    background-size: 100%;
+    color: var(--culoare-fundal-inchis);
+    background-image: radial-gradient(var(--culoare-highlight) 40%, transparent 80%, transparent 100%);
+    transition: all 1s linear;
+}
+
+main a:visited{
+    color: var(--culoare-highlight2);
+}
+
+main a:active{
+    border: 2px solid var(--culoare-fundal-inchis);
+}
+
+main a[href^="http"]::before{
+    content: "⮳";
+    font-size: 1.5rem;
+}
+
+main a[href^="http"]:hover::before{
+    color: var(--culoare-highlight);
+}
+
+.videolocal{
+    margin-top:25px;
+}
+
+video{
+    width: 100%;
+    min-width: 400px;
+    max-width: 1000px;
+}
+
+video::cue{
+    color: transparent;
+    background: linear-gradient(to right, var(--culoare-fundal), var(--culoare-gri));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+
+}
+
