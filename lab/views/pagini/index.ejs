@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html  lang="ro">
     <head>
         
         <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
         <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
         <title>Cofetăria Dulcelind</title>
-        <%- include('../fragmente/head.ejs') %>
+        <%- include("../fragmente/head.ejs")  %>
         
+        <link rel="stylesheet" href="/resurse/css/galerie-animata.css" type="text/css"/>
     </head>
     <body>
-        <%- include('../fragmente/header.ejs') %>
+    <%- include("../fragmente/header.ejs")  %>
     <main>
         <div id="grid-pagina">
             <section id="welcome">
-                <h2 class="intro">Bine ati venit</h2>
+                <h2>Bine ati venit</h2>
+                <button class="btn btn-primary">ceva</button>
                 <p>
-                    Ip: <%- locals.ip %>
+                    Ip:  <%- locals.ip  %>
                 </p>
-                <p>
-                    Suma: <%- locals.a+locals.b %>
-                </p>
+                <p>Suma: <%- locals.a+locals.b  %></p>
                 <p class="intro">Vă mulțumim că ne vizitați site-ul. Luați de aici niște biscuiți virtuali. Poftă bună!</p>
                 
                 <div class="intro-oferte"><div>Pateuri</div><div>Bomboane</div><div>Fursecuri</div><div>Prajituri</div><div>Torturi</div></div>
@@ -256,36 +256,25 @@
         <section id="galerie-statica">
             <h2>Galerie</h2>
             <div id="grid-galerie">
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
-                <figure>
-                <img src="resurse/imagini/briose-frisca.png" alt="briose">
-                <figcaption>Briose</figcaption>
-                </figure>
+                <% for (let imag of locals.imagini) { 
+                    d=new Date()
+                    var v_luni=["ianuarie", "februarie", "martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"]
+                    if(imag.luni && imag.luni.includes(v_luni[d.getMonth()])) {
+                    %>
+                   
+                        <figure>
+                            <picture>
+                                <source srcset="<%- imag.fisier_mediu %>" media="(max-width:1000px)" />
+                                <img src="<%- imag.fisier %>" alt="imagine">
+                            </picture>
+                            <figcaption><%- imag.descriere %></figcaption>
+                        </figure>
             
+            
+                        <% }  %>
+                <% }  %>
             </div>
+            
         </section>
         <section id="retete">
             <h2>Retete</h2>
@@ -303,7 +292,9 @@
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
     </main>
-    <%- include('../fragmente/footer.ejs') %>
+
+    <%- include("../fragmente/galerie_animata.ejs")  %>
+    <%- include("../fragmente/footer.ejs")  %>
 
     </body>
 </html>

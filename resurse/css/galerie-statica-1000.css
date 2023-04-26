@@ -1,0 +1,7 @@
+#grid-galerie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+.empty{
+    display: none;
+}

@@ -1,17 +1,16 @@
 html{
-    font-size: 12px;
+    font-size:12px;
 }
 
 body{
-    --spatiere-pagina: 10px;
-    --padding-sectiune: 5px;
+    --spatiere-pagina:10px;
+    --padding-sectiune:5px;
 }
 
 #grid-pagina{
     display: block;
-
 }
 
-#grid-pagina > *{
+#grid-pagina > * {
     margin-bottom: 15px;
 }

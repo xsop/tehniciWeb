@@ -3,21 +3,27 @@
 }
 
 body {
-  --inaltime-meniu: 55px;
-  --latime-buton: 150px;
-  --culoare-meniu: var(--culoare-fundal-inchis);
-  --culoare-border-buton: black;
-  --culoare-buton-hover: pink;
+  --inaltime-meniu:55px;
+  --latime-buton:150px;
+  --culoare-meniu:var(--culoare-fundal-inchis);
+  --culoare-border-buton:black;
 }
 
 nav {
-  --text-meniu: black;
+  --text-meniu:black;
   background-color: var(--culoare-meniu);
+  /*width:100%;*/
   width: calc(100vw - 18px);
   height: var(--inaltime-meniu);
   position: sticky;
   top: 0;
   margin-left: calc(-1 * var(--spatiere-pagina));
+}
+
+ul.meniu, ul.meniu ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 ul.meniu {
@@ -38,30 +44,24 @@ ul.meniu li {
   text-align: center;
   border: 1px solid var(--culoare-border-buton);
   transition: background-color 0.8s linear;
-  box-sizing: border-box1;
+  box-sizing: border-box;
 }
 ul.meniu li:hover {
   overflow: visible;
-  list-style-type: none;
-  background-color: var(--culoare-buton-hover);
+  background-color: pink;
+  /* de setat cu variabila */
 }
 
 ul.meniu ul {
   opacity: 0;
   transition: all 0.8s linear;
   transform: scale(0, 0);
-  /*from top*/
   transform-origin: center top;
 }
 
 ul.meniu li:hover ul {
   opacity: 1;
   transform: scale(1, 1);
-}
-
-ul.meniu, ul.meniu ul {
-  margin: 0;
-  padding: 0;
 }
 
 ul.meniu li div, ul.meniu li a {
@@ -74,12 +74,12 @@ ul.meniu li div, ul.meniu li a {
   line-height: var(--inaltime-meniu);
 }
 
-/*ul.meniu li:nth-child(even){
+/*
+ul.meniu>li:nth-child(even){
     background-color: skyblue;
 }
-
-ul.meniu li:nth-child(odd){
-    background-color: lightskyblue;
+ul.meniu>li:nth-child(odd){
+    background-color: red;
 }*/
 #acasa-mediu {
   display: none;

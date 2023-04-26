@@ -23,7 +23,7 @@
         {
             "identificator":400,
             "status":true,
-            "titlu":"400 - Bad request",
+            "titlu":"400 - bad request",
             "text": "Cerere gresita",
             "imagine":"interzis.png"
         },

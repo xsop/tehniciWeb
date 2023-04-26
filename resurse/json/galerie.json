@@ -1,0 +1,47 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"pc_int.jpg",
+			"alt": "pc interior",
+			"text_descriere": "Interiorul unui calculator",
+			"luni":["martie","februarie","noiembrie","aprilie"]
+		},
+		{
+			"fisier":"pc_int2.jpg",
+			"alt": "pc interior",
+			"text_descriere": "Interiorul unui calculator",
+			"luni":["ianuarie","februarie","octombrie","aprilie"]
+		},
+		{
+			"fisier":"kbby.jpg",
+			"alt": "tastatura",
+			"text_descriere": "Tastatura iluminata",
+			"luni":["ianuarie","februarie","octombrie","aprilie"],
+			"copyright": {
+				"nume":"Karl Hols",
+				"data":"June 11, 2016 at 12:36:12 AM GMT+3"
+			}
+		},
+		{
+			"fisier":"pc_int3.jpg",
+			"alt": "pc interior",
+			"text_descriere": "Interiorul unui calculator",
+			"luni":["ianuarie","februarie","octombrie","aprilie"]
+		},
+		{
+			"fisier":"kb.jpg",
+			"alt": "tastatura",
+			"text_descriere": "Tastatura iluminata",
+			"luni":["ianuarie","februarie","octombrie","aprilie"]
+		},
+		{
+			"fisier":"nvidia.jpg",
+			"alt": "placa video",
+			"text_descriere": "Placa video NVidia",
+			"luni":["ianuarie","februarie","octombrie","aprilie"]
+		}
+		
+		
+	]
+}

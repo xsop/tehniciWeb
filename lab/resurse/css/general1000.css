@@ -1,19 +1,24 @@
 html{
-    font-size: 16px;
+    font-size:16px;
 }
+
 
 body{
-    --spatiere-pagina: 30px;
-    --padding-sectiune: 10px;
+    --spatiere-pagina:30px;
+    --padding-sectiune:10px;
 }
 
+
+
 #grid-pagina{
-    grid-template-columns: 1fr 1fr; /* repeat(2,1fr) */
-    grid-template-areas:"z-welcome z-welcome"
+    grid-template-columns: 1fr 1fr; /* repeat(2,1fr)*/
+    grid-template-areas: 
+                        "z-index-intrebari z-index-intrebari"    
                         "z-produse z-promotii"
                         "z-fig1 z-orar"
                         "z-fig2 z-orar"
                         "z-fig3 z-orar"
                         "z-anunturi z-anunturi"
-                        "z-index-intrebari z-index-intrebari";
+                        "z-welcome z-welcome"
+                        ;
 }
