@@ -293,28 +293,19 @@ iframe {
     display: none;
 }
 
-<<<<<<< HEAD
 main a {
-=======
-main a{
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
     background-position: center;
     background-size: 0;
     background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 main a:hover {
-=======
-main a:hover{
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
     background-size: 100%;
     color: var(--culoare-fundal-inchis);
     background-image: radial-gradient(var(--culoare-highlight) 40%, transparent 80%, transparent 100%);
     transition: all 1s linear;
 }
 
-<<<<<<< HEAD
 main a:visited {
     color: var(--culoare-highlight2);
 }
@@ -324,22 +315,10 @@ main a:active {
 }
 
 main a[href^="http"]::before {
-=======
-main a:visited{
-    color: var(--culoare-highlight2);
-}
-
-main a:active{
-    border: 2px solid var(--culoare-fundal-inchis);
-}
-
-main a[href^="http"]::before{
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
     content: "⮳";
     font-size: 1.5rem;
 }
 
-<<<<<<< HEAD
 main a[href^="http"]:hover::before {
     color: var(--culoare-highlight);
 }
@@ -349,27 +328,12 @@ main a[href^="http"]:hover::before {
 }
 
 video {
-=======
-main a[href^="http"]:hover::before{
-    color: var(--culoare-highlight);
-}
-
-.videolocal{
-    margin-top:25px;
-}
-
-video{
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
     width: 100%;
     min-width: 400px;
     max-width: 1000px;
 }
 
-<<<<<<< HEAD
 video::cue {
-=======
-video::cue{
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
     color: transparent;
     background: linear-gradient(to right, var(--culoare-fundal), var(--culoare-gri));
     -webkit-background-clip: text;
@@ -378,7 +342,6 @@ video::cue{
 
 }
 
-<<<<<<< HEAD
 #text-reflectat{
 	position:absolute;
 	left:0;
@@ -429,5 +392,3 @@ hr {
   }
   
   
-=======
->>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
