@@ -14,6 +14,7 @@
     "gaming"
   ],
   "author": "Stefan Paun",
+<<<<<<< HEAD
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3",
@@ -22,4 +23,7 @@
     "scss": "^0.2.4",
     "sharp": "^0.32.0"
   }
+=======
+  "license": "ISC"
+>>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
 }

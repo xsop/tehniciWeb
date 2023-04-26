@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <%- include('../fragmente/header.ejs') %>
 
         <main>
@@ -277,6 +278,216 @@
             <div>Stefan</div>
         </div>
         <%- include('../fragmente/footer.ejs') %>
+=======
+     <%- include('../fragmente/header.ejs') %>
+    
+    <main>
+        <div id="grid-pagina">
+            <figure id="banner">
+                <picture>
+                    <source media="(max-width: 800px)" srcset="resurse/imagini/regnum-rg6v-exp-400x226.png">
+                    <source media="(max-width: 1600px)" srcset="resurse/imagini/regnum-rg6v-exp-800x451.png">
+                    <img src="resurse/imagini/regnum-rg6v-exp-1600x901.png" alt="imagine-sigla"
+                        title="Carcasa SilentiumPC desfasurata">
+                </picture>
+                <figcaption>Desfasurare Carcasa</figcaption>
+            </figure>
+            <section id="online">
+                <h2>Utilizatori online:</h2> <span id="utilizatori-online">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Perspiciatis, deleniti repellat. Ea deleniti nihil iusto consequuntur dolores cum itaque
+                        ad veritatis culpa tempora eos fuga quisquam, sit asperiores quos. Distinctio.</span>
+            </section>
+            <section id="dateutilizator">
+                <h2>Utilizator:</h2><span id="utilizator">IP: <%- locals.ip %></span>
+            </section>
+            <section id="dateserver">
+                <h2>Date despre server:</h2><span id="server">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident nesciunt labore, culpa minima unde optio? Alias voluptatum quaerat consequuntur
+                        facilis officia iste odit sunt nulla, sequi cumque dicta, facere consectetur!</span>
+            </section>
+            <section id="calendar">
+                <h2>Calendar:</h2>
+                <span id="calendarspan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod aliquid veniam totam laboriosam rerum
+                    nisi animi eligendi alias doloremque dolorum error quidem quibusdam, molestias omnis ratione, magni
+                    repellendus odit? Modi.</span>
+            </section>
+            <section id="anunturi">
+                <h2>Anunturi:</h2>
+                <span id="anunt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ab dolore voluptatibus reprehenderit totam nam aliquid natus, iste dolor neque provident facilis quis sint repudiandae consectetur commodi architecto magnam rem?</span>
+            </section>
+            <div id="tabel">
+                <div class="tabel-container">
+                    <table>
+                        <caption>Date lansare</caption>
+                        <thead>
+                            <tr>
+                                <th>Tip</th>
+                                <th>Data</th>
+                                <th>Produs</th>
+                                <th>Descriere</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data sigură</td>
+                                <td>6 Aprilie 2023</td>
+                                <td>AMD Ryzen 7 7800X3D</td>
+                                <td>Se vehiculeaza un MSRP de $449</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">Data neanunțată</td>
+                                <td>Vara 2023</td>
+                                <td>NVIDIA GeForce RTX 4060</td>
+                                <td>Performanță similară cu RTX 3070</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>2023</td>
+                                <td>NVIDIA GeForce RTX 4060 Ti </td>
+                                <td>Acelasi procesor grafic cu non-ti, AD106</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>2023</td>
+                                <td>AMD Radeon RX 7600 XT </td>
+                                <td>Procesor grafic Navi 33</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">Aceste date sunt susceptibile la diverse modificări și trebuie
+                                    considerate doar orientativ.</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div id="other">
+                <section id="welcome">
+                    <h2 id="welcomeheading">Bine ați venit!</h2>
+                    <p>Bine ați venit la Component Connection, destinația finală pentru toate nevoile dumneavoastră în
+                        materie
+                        de componente PC. Suntem o echipă de entuziaști dedicați PC-ului care înțeleg importanța de a
+                        avea
+                        componentele potrivite pentru a vă construi calculatorul de vis. Fie că sunteți un jucător
+                        experimentat,
+                        un creator de conținut sau un profesionist în afaceri, noi vă acoperim.</p>
+                </section>
+                <section>
+                    <h3 id="componente">Componente <span class="fa-solid fa-microchip"></span></h3>
+                    <p style="font-weight: bold;">Site-ul nostru oferă o selecție vastă de componente PC de înaltă
+                        calitate,
+                        incluzând:</p>
+                    <ol>
+                        <li>Placa video</li>
+                        <li>Procesor</li>
+                        <li>Placa de baza</li>
+                        <li>Memorii RAM</li>
+                        <li>HDD si SSD</li>
+                        <li>Sursa</li>
+                        <li>Carcasa</li>
+                        <li>Cooler</li>
+                    </ol>
+                    <p><span class="fa-solid fa-triangle-exclamation fa-fade"></span> <strong>Atenție! Efectuarea unei
+                            comenzi din partea noastră nu garantează compatibilitatea între mai
+                            multe componente. <br> Pentru ajutor specializat, solicitați un tehnician.</strong></p>
+                    <p>Serviciul de <b>asamblare</b> costa <span style="font-weight: bold;"><s>15%</s> <ins
+                                style="text-decoration: none;">10%</ins></span> din costul comenzii.</p>
+                    <p style="font-weight: bold;">Ne rezervăm dreptul de a respinge cereri ale serviciului</p>
+                </section>
+                <section>
+                    <h3 id="faq">Întrebări frecvente</h3>
+
+                    <details>
+                        <summary>Care sunt cele mai bune componente PC pentru jocuri?</summary>
+                        <p>Cele mai bune componente PC pentru jocuri includ un procesor de înaltă performanță, o placă
+                            grafică puternică, memorie rapidă și spațiu de stocare suficient. <br> Printre alegerile
+                            populare se numără:</p>
+                        <ul>
+                            <li><i>CPU: </i>Intel Core i7 sau AMD Ryzen 5 și 7</li>
+                            <li><i>GPU: </i>Nvidia GeForce RTX 3070</li>
+                            <li><i>SSD: </i>Samsung sau Corsair</li>
+                        </ul>
+                        <p style="font-weight: bold;">Aceste <i>brand-uri</i> și <i>modele</i> sunt doar orientative și
+                            nu
+                            garantează cel mai bun raport intre preț și calitate.</p>
+                    </details>
+                    <details>
+                        <summary>Cum știu dacă o componentă PC este compatibilă cu sistemul meu?</summary>
+                        <p>Verificați compatibilitatea componentelor PC cu sistemul dumneavoastră prin intermediul
+                            <a href="https://pcpartpicker.com/" target="_blank">PCPartPicker</a>. <br> Acesta este un
+                            serviciu gratuit care vă permite să comparați componente PC și să verificați dacă sunt
+                            compatibile cu sistemul dumneavoastră.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre un procesor Intel și AMD?</summary>
+                        <p>Procesoarele Intel și AMD sunt cele mai populare alegeri pentru construirea unui PC. <br>
+                            Intel
+                            este mai cunoscut pentru performanța sa de înaltă calitate, în timp ce AMD este mai cunoscut
+                            pentru prețul său mai mic. <br> Intel este mai bun pentru jocuri, în timp ce AMD este mai
+                            bun pentru aplicații profesionale.</p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre un SSD și un HDD?</summary>
+                        <p>SSD-ul este mai rapid și mai silențios decât HDD-ul, dar este mai scump. <br> HDD-ul este mai
+                            ieftin și mai capabil decât SSD-ul, dar este mai lent și mai zgomotos.</p>
+                    </details>
+                    <details>
+                        <summary>Care este diferența dintre memoria DDR4 și DDR5?</summary>
+                        <p>Memoria DDR4 este mai ieftină decât memoria DDR5, dar este mai puțin capabilă.
+                            <br> Memoria DDR5 este mai rapidă și mai capabilă decât memoria DDR4, dar este mai scumpă.
+                            <br> De asemenea, în funcție de placa de bază, memoria DDR5 poate fi incompatibilă cu restul
+                            sistemului.
+                        </p>
+                    </details>
+                    <section>
+                        <h4>Linkuri utile</h4>
+                        <p style="font-weight: bold;"><a href="https://pcpartpicker.com/"
+                                target="_blank">https://pcpartpicker.com/</a> (verificare compatibilitate componente)
+                        </p>
+                        <p style="font-weight: bold;">
+                            <a href="resurse/imagini/gpu-perf-graph.jpg" download>
+                                Grafic orientativ performanță GPU
+                            </a>(download .jpg)
+                        </p>
+                        <div class="iframe-container">
+                            <div class="taburi-iframe">
+                                <a href="https://www.youtube.com/embed/BL4DCEp7blY" class="link-iframe"
+                                    target="ifr-video">Tutorial complet
+                                    asamblare</a>
+                                <a href="https://www.youtube.com/embed/RYYoCXh2gtw" class="link-iframe"
+                                    target="ifr-video">Ghid setări</a>
+                                <a href="https://www.youtube.com/embed/XqY-BL5pLjQ" class="link-iframe"
+                                    target="ifr-video">Programe importante</a>
+                            </div>
+                            <iframe name="ifr-video" width="560" height="315"
+                                src="https://www.youtube.com/embed/BL4DCEp7blY"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+
+                        </div>
+                    </section>
+                    <div class="videolocal">
+                        <video controls="controls" poster="resurse/video/poster.jpg" preload="auto">
+                            <source src="./resurse/video/video.mp4" type="video/mp4">
+                            <source src="./resurse/video/video.webm" type="video/webm">
+                            <track default src="./resurse/video/ro.vtt" kind="captions" srclang="ro" label="ro" />
+                            <track src="resurse/video/en.vtt" kind="captions" srclang="en" label="en" />
+                        </video>
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+    </main>
+    <div class="watermark">
+        <div>Paun</div>
+        <div>Stefan</div>
+    </div>
+    <%- include('../fragmente/footer.ejs') %>
+>>>>>>> 9225d38db209dbfc5c7012658ad60cea54eaef18
 </body>
 
 </html>
