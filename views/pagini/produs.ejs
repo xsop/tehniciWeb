@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+        <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
+        
+        <title>Cofetăria Dulcelind - home</title>
+        <%- include("../fragmente/head") %>     
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>
+                    <p>Brand: <span class="brand"><%- locals.prod.brand %> </span></p>
+                    <p>Tip alimentare: <span class="tip_alim"><%- locals.prod.tip_alim %> </span></p>
+                    <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                    <p>RAM: <span class="ram"><%- locals.prod.ram %> GB </span></p>
+                     <% d=locals.prod.data_adaugare;
+                    var v_luna = ["Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie"];
+                    var luna = v_luna[d.getMonth()];
+                    var v_zi=["Luni","Marti","Miercuri","Joi","Vineri","Sambata","Duminica"];
+                    var zi=v_zi[d.getDay()-1]; %>
+                    <p>Data adăugare: <time datetime="<%d.toUTCString()%>" class="val-data"><%-d.getDate()%>/<%-luna%>/<%-d.getFullYear()%> (<%-zi%>)</time></p> 
+                    <p>Număr ventilatoare: <span class="nr_vent"><%- locals.prod.nr_vent %> </span></p>
+                    <p>Tehnologii: <span class="tehnologii"><%- locals.prod.tehnologii %> </span></p>
+                    <p>Pentru gaming: <span class="pt_gaming"><%- locals.prod.pt_gaming %> </span></p>
+                    
+                    
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

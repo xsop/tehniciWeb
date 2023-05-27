@@ -5,6 +5,7 @@ const sharp = require('sharp');
 const sass = require('sass');
 const ejs = require('ejs');
 const { Client } = require('pg');
+const e = require("express");
 
 var client = new Client({
     database: "db_test",
@@ -27,15 +28,25 @@ obGlobal = {
     folderScss: path.join(__dirname, "resurse/scss"),
     folderCss: path.join(__dirname, "resurse/css"),
     folderBackup: path.join(__dirname, "backup"),
-    optiuniMeniu: []
+    optiuniMeniu: [],
+    optiuniVentilatoare: []
 }
 
-client.query("select * from unnest(enum_range(NULL::tipuri_produse))", function (err, rezCategorie) {
+client.query("select * from unnest(enum_range(NULL::branduri))", function (err, rezCategorie) {
     if (err) {
         console.log(err);
     }
     else {
         obGlobal.optiuniMeniu = rezCategorie.rows;
+    }
+});
+
+client.query("select distinct(nr_vent) from gpu order by nr_vent", function (err, rezVentilatoare) {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        obGlobal.optiuniVentilatoare = rezVentilatoare.rows;
     }
 });
 
@@ -81,7 +92,7 @@ function compileazaScss(caleScss, caleCss) {
     rez = sass.compile(caleScss, { "sourceMap": true });
     fs.writeFileSync(caleCss, rez.css);
     //console.log("Compilare SCSS",rez);
-    
+
 }
 //compileazaScss("a.scss");
 vFisiere = fs.readdirSync(obGlobal.folderScss);
@@ -109,6 +120,7 @@ app.use("/node_modules", express.static(__dirname + "/node_modules"));
 
 app.use("/*", function (req, res, next) {
     res.locals.optiuniMeniu = obGlobal.optiuniMeniu;
+    res.locals.optiuniVentilatoare = obGlobal.optiuniVentilatoare;
     next();
 });
 
@@ -169,32 +181,45 @@ app.get("/produse", function (req, res) {
     //TO DO query pentru a selecta toate produsele
     //TO DO se adauaga filtrarea dupa tipul produsului
     //TO DO se selecteaza si toate valorile din enum-ul categ_prajitura
-    client.query("select * from unnest(enum_range(NULL::categ_prajitura))", function (err, rezCategorie) {
+    client.query("select * from unnest(enum_range(NULL::branduri))", function (err, rezCategorie) {
         if (err) {
             console.log(err);
         }
         else {
-            let conditieWhere = "";
-            if (req.query.tip)
-                conditieWhere = ` where tip_produs ='${req.query.tip}'`;
-            client.query("select * from prajituri" + conditieWhere, function (err, rez) {
-                console.log(300)
+            client.query("select distinct(nr_vent) from gpu order by nr_vent", function (err, rezVent) {
                 if (err) {
                     console.log(err);
-                    afisareEroare(res, 2);
                 }
-                else
-                    res.render("pagini/produse", { produse: rez.rows, optiuni: rezCategorie.rows });
+                else {
+                    let conditieWhere = "";
+                    if (req.query.brand)
+                        conditieWhere = ` where brand='${req.query.brand}'`
+                    client.query("select * from gpu" + conditieWhere, function (err, rez) {
+                        console.log(300)
+                        if (err) {
+                            console.log(err);
+                            afisareEroare(res, 2);
+                        }
+                        else
+                            res.render("pagini/produse", {
+                                produse: rez.rows, optiuni: rezCategorie.rows, vent: rezVent.rows
+                        });
+                    });
+                }
             });
         }
-    })
-
+    });
 });
+
+
+
+
+
 
 app.get("/produs/:id", function (req, res) {
     console.log(req.params);
 
-    client.query(`select * from prajituri where id=${req.params.id}`, function (err, rezultat) {
+    client.query(`select * from gpu where id=${req.params.id}`, function (err, rezultat) {
         if (err) {
             console.log(err);
             afisareEroare(res, 2);

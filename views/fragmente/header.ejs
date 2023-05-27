@@ -20,13 +20,24 @@
                 <li><a href="/index#faq">FAQ</a></li>
             </ul>
         </li>
-        <li><div><a href="produse.html">Produse</a></div>
+        <li><div><a href="/produse">Produse</a></div>
             <ul>
-                <li><a href="#">Promotii</a></li>
-                <li><a href="#">Catalog</a></li>
+                <% for (let opt of locals.optiuniMeniu) { %>
+                    <li><a href="/produse/?brand=<%- opt.unnest %>"><%- opt.unnest %> </a></li>
+                <% } %>
             </ul>
         </li>
         <li><a href="cos.html">Cos</a></li>
         <li><a href="contact">Contact</a></li>
     </ul>
+    <div class="header">
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+            </label>
+        </div>
+    </div>
 </nav>

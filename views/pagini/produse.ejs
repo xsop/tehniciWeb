@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta name="description"
+        content="Cofetaria Dulcelind ofera prajituri, torturi, produse de patiserie cu optiunea de achizitie online si livrare prin curier.">
+    <meta name="keywords" content="cofetarie, Dulcelind, prajituri, torturi, dulce, pateuri, produse">
+    <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+    <title>Cofetăria Dulcelind - home</title>
+    <%- include("../fragmente/head") %>
+        <script type="text/javascript" src=/resurse/js/produse.js></script>
+
+</head>
+
+<body>
+    <%- include("../fragmente/header") %>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <label class="col-6"> Nume: <input type="text" id="inp-nume"></label>
+                    <div class="col-6"><label for="brand">Brand:</label>
+                        <input list="brands" name="brand" id="brand">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6"> Memorie RAM:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+                        <p><label>Puțină (RAM &lt; 6 GB)
+                                <input id="i_rad1" name="gr_rad" value="0:6" type="radio" />
+                            </label></p>
+                        <p><label>Medie (6 GB &le; RAM &lt; 12GB)
+                                <input id="i_rad2" name="gr_rad" value="6:12" type="radio" />
+                            </label>
+                        <p><label>Multă (12GB &le; RAM)
+                                <input id="i_rad3" name="gr_rad" value="12:1000000000" type="radio" />
+                            </label>
+                        <p><label>Toate
+                                <input id="i_rad4" checked name="gr_rad" value="toate" type="radio" />
+                            </label>
+                    </div>
+                    <div class="col-6">
+                        <label for="tehn">Tehnologii:</label>
+
+                        <select name="tehn" id="inp-tehn" multiple>
+                            <option value="freesync">Freesync</option>
+                            <option value="g-sync">G-Sync</option>
+                            <option value="vr-ready">VR Ready</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-secondary">Pentru gaming
+                            <input id="chk" name="chk" type="checkbox" />
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>Numar ventilatoare:
+                            <select id="inp-categorie">
+                                <option id="sel-toate" selected value="toate">toate</option>
+                                <% for (let opt of locals.optiuniVentilatoare) { %>
+                                    <option value="<%- opt.nr_vent %>"><%- opt.nr_vent %> </option>
+                                    <% } %>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+
+                <datalist id="brands">
+                    <% for (let opt of locals.optiuniMeniu) { %>
+                        <option value="<%- opt.unnest %>">
+                            <% } %>
+                </datalist>
+                <br>
+                <label for="desc">Descriere:</label><br>
+                <div class="form-floating">
+                    <textarea id="inp-desc" class="form-control" name="desc" rows="2" cols="25"></textarea>
+                    <label for="floatingTextarea2">Descriere</label>
+                </div>
+                <br>
+                <div class="row">
+                    <label class="col form-label"> Pret minim: |0| <input type="range" class="form-range" id="inp-pret-min" value="0" min="0"
+                            max="10000"> <span id="infoRangeMin">(0)</span> |10000|</label>
+                    <label class ="col form-label"> Pret maxim: |0| <input type="range" class="form-range" id="inp-pret-max" value="10000" min="0" max="10000"> <span
+                            id="infoRangeMax">(10000)</span> |10000|</label><br>
+                    <br><br>
+                </div>
+
+
+
+                <p>
+                <div class="row">
+                    <div class="col"> <button id="filtrare" class="btn btn-primary btn-large"><i
+                                class="bi bi-filter"></i>
+                            <p class="d-none d-md-block">Filtreaza</p>
+                        </button>
+                    </div>
+                    <div class="col"> <button id="resetare" class="btn btn-primary btn-large"><i
+                                class="bi bi-rewind"></i>
+                            <p class="d-none d-md-block">Reseteaza</p>
+                        </button></div>
+                    <div class="col"><button id="sortCrescNume" class="btn btn-primary btn-sm"><i
+                                class="bi bi-sort-alpha-down"></i>
+                            <p class="d-none d-md-block">Sorteaza crescator dupa pret si descriere</p>
+                        </button></div>
+                    <div class="col"><button id="sortDescrescNume" class="btn btn-primary btn-sm"><i
+                                class="bi bi-sort-alpha-down-alt"></i>
+                            <p class="d-none d-md-block">Sorteaza descrescator dupa pret si descriere</p>
+                        </button></div>
+
+                    <div class="col"><button id="calcSum" class="btn btn-primary btn-sm"><i
+                                class="bi bi-calculator"></i>
+                            <p class="d-none d-md-block">Calculeaza suma tuturor produselor</p>
+                        </button></div>
+                </div>
+                </p>
+            </div>
+
+            <section id="produse">
+                <h2>Produse</h2>
+                <div class="grid-produse">
+                    <% for( let prod of locals.produse) { %>
+                        <article class="produs">
+                            <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>"><span class="val-nume"><%-
+                                            prod.nume%></span></a></h3>
+                            <p class="brand">Brand: <span class="val-brand"><%- prod.brand%></span></p>
+
+                            <table class="info-prod">
+                                <tr>
+                                    <th>Caracteristica</th>
+                                    <th>Valoare</th>
+
+                                </tr>
+                                <tr>
+                                    <td class="pret">Pret</td>
+                                    <td class="val_pret"><%- prod.pret%></td>
+                                </tr>
+                                <tr>
+                                    <td class="nr_vent">Număr ventilatoare</td>
+                                    <td class="val_nr_vent"><%- prod.nr_vent%></td>
+                                </tr>
+                                <tr>
+                                    <td class="tehnologii">Tehnologii</td>
+                                    <td class="val_tehnologii"><%- prod.tehnologii %> </td>
+                                </tr>
+                                <tr>
+                                    <td class="data">Data adăugare</td>
+                                    <% d=prod.data_adaugare; var
+                                        v_luna=["Ianuarie","Februarie","Martie","Aprilie","Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie"];
+                                        var luna=v_luna[d.getMonth()]; var
+                                        v_zi=["Luni","Marti","Miercuri","Joi","Vineri","Sambata","Duminica"]; var
+                                        zi=v_zi[d.getDay()-1]; %>
+                                        <td class="val-data"><time
+                                                datetime="<%d.toUTCString()%>"><%-d.getDate()%>/<%-luna%>/<%-d.getFullYear()%>
+                                                            (<%-zi%>)</time></p>
+                                </tr>
+                                <tr>
+                                    <td class="pt_gaming">Pentru gaming</td>
+                                    <td class="val_pt_gaming"><%- prod.pt_gaming %> </td>
+                                </tr>
+                            </table>
+                            <div class="d-none">
+                                <p class="val-ram"><%- prod.ram%></p>
+                                <p class="desc"><span class="val-desc"><%- prod.descriere%></span></p>
+                            </div>
+                            <figure class="prod-img">
+                                <a href="/produs/<%-prod.id %>"><img src="/resurse/imagini/produse/<%- prod.imagine %>"
+                                        style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" /></a>
+                            </figure>
+                            <label class="selecteaza-cos">
+                                Selectează:<br />
+                                <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
+                            </label>
+                        </article>
+                        <% }%>
+                </div>
+            </section>
+        </main>
+
+        <%- include("../fragmente/footer") %>
+</body>
+
+</html>

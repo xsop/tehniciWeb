@@ -1,11 +1,9 @@
-@use "../../node_modules/bootstrap/scss/bootstrap.scss" with (
-    $primary: #495B73,
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with ($primary: #495B73,
     $secondary: #586F8C,
     $body-bg: #F2F2F2,
     $body-color: #262625,
 
-    $grid-breakpoints: (
-        xs: 0,
+    $grid-breakpoints: (xs: 0,
         sm: 500px,
         md: 700px,
         lg: 1000px,
@@ -13,8 +11,7 @@
         xxl: 1400px,
     ),
 
-    $container-max-widths: (
-        sm: 470px,
+    $container-max-widths: (sm: 470px,
         md: 660px,
         lg: 940px,
         xl: 1140px,
@@ -28,12 +25,16 @@
     $border-radius-2xl: 2rem,
     $border-radius-pill: 50rem,
 
-    $display-font-sizes: (
-        1: 2rem,
+    $display-font-sizes: (1: 2rem,
         2: 1.5rem,
         3: 1.25rem,
         4: 1rem,
         5: 0.5rem,
         6: 0.25rem,
     ),
-    $font-family-base: "Roboto");
+    $font-family-base: "Roboto",
+    $form-range-thumb-width: 1.5rem,
+    $form-range-thumb-height: 1.5rem,
+    $form-range-thumb-bg: #92AAAA,
+    $form-range-track-bg: #31382F);
+@use "../../node_modules/bootstrap-icons/font/bootstrap-icons";
